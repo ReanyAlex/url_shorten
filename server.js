@@ -33,7 +33,7 @@ app.route('/http(s)?://www.*').get(function(req, res) {
 
   let randomNumber = (Math.random()*9999).toFixed(0)
   // let urlShorten = `http://localhost:3000/${randomNumber}`
-  let urlShorten = `https://shielded-falls-75230.herokuapp.com/${randomNumber}`
+  let urlShorten = `https://warm-garden-64498.herokuapp.com/${randomNumber}`
 
   res.send({
     url: url,
@@ -46,6 +46,7 @@ app.route('/http(s)?://www.*').get(function(req, res) {
 
 
 app.route('/:num').get(function(req, res) {
+  console.log("a");
   let url = app.get('url')
   let random = app.get('random')
   console.log(random);
@@ -74,4 +75,3 @@ app.use(function(err, req, res, next) {
 app.listen(process.env.PORT || 3000, function() {
   console.log('Node.js listening ...');
 });
-1111
