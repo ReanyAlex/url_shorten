@@ -46,7 +46,6 @@ app.route('/http(s)?://www.*').get(function(req, res) {
 
 
 app.route('/:num').get(function(req, res) {
-  console.log("a");
   let url = app.get('url')
   let random = app.get('random')
   console.log(random);
